@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DisCo: Distributed Contact-Rich Trajectory Optimization for Forceful Multi-Robot Collaboration">
+  <meta name="keywords" content="Distributed contact-rich trajectory optimization, contact-implicit optimization,
+   multi-robot collaboration, distributed optimization, multi-agent networks.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="Mv03K1PSHa6DfPDktDXDooEr11AZ1jIliliLan_6mQg" />
+  <title>DisCo: Distributed Contact-Rich Trajectory Optimization for Forceful Multi-Robot Collaboration</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://msl.stanford.edu/">
+            MSL Research
+          </a>
+          <a class="navbar-item" href="https://www.hawkeslab.com/">
+            Hawkes Lab
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            DisCo: Distributed Contact-Rich Trajectory Optimization for Forceful Multi-Robot Collaboration</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="/">Ola Shorinwa</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.matthewdevlin.com/">Matthew Devlin</a><sup>2</sup>,</span>
+            <span class="author-block">
+                <a href="https://me.ucsb.edu/people/elliot-hawkes">Elliot Hawkes</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://web.stanford.edu/~schwager/">Mac Schwager</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Stanford University,</span>
+            <span class="author-block"><sup>2</sup>University of California, Santa Barbara</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4" type="video/mp4">
+      </video> -->
+      <img id="teaser-image" src="./static/images/disco_applications.png"
+      alt="DisCo."/>
+      <p class="has-text-justified"></p>
+      Our algorithm,
+      <span class="disco">DisCo</span>,
+      is amenable to a broad class of collaborative 
+      multi-robot problems involving contact, 
+      such as: (Left) collaborative manipulation, 
+      e.g., of a table; (Center) robot team sports, 
+      e.g., robot soccer; 
+      and (Right) locomotion of modular robots. 
+      In each scenario, each robot solves a local 
+      contact-implicit trajectory optimization problem 
+      to complete the task in collaboration with other 
+      robots.
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce DisCo, a distributed algorithm for contact-rich,
+            multi-robot tasks, which leverages contact-implicit 
+            trajectory optimization to enable a group of robots to
+            collaborate through contact in tasks such as collaborative
+            manipulation, robot team sports, and modular robot locomotion.
+            We build our algorithm on a variant of the Alternating Direction
+            Method of Multipliers (ADMM), where each robot computes its
+            own contact forces and contact-switching events from a smaller 
+            single-robot, contact-implicit trajectory optimization problem,
+            while cooperating with other robots through dual variables, 
+            enforcing constraints between robots. Each robot iterates
+            between solving its local problem, and communicating over a 
+            wireless mesh network to enforce these consistency constraints
+            with its neighbors, ultimately converging to a coordinated
+            plan for the group. The local problems solved by each 
+            robot are significantly less challenging than a centralized 
+            problem with all robots' contact forces and switching events,
+            improving the computational efficiency, while also preserving
+            the privacy of some aspects of each robot's operation.
+            We demonstrate the effectiveness of our algorithm in 
+            simulations of collaborative manipulation, multi-robot 
+            team sports scenarios, and in modular robot locomotion, 
+            where DisCo achieves 3x higher success rates 
+            with a 2.5x to 5x faster computation time. Further, we 
+            provide results of hardware experiments on a modular truss 
+            robot, with three collaborating truss nodes planning 
+            individually while working together to produce a punctuated 
+            rolling-gate motion of the composite structure.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- DisCo. -->
+    <div class="columns is-centered">
+      <div class="content column is-full-width">
+        <h2 class="title is-3"><span class="disco">DisCo</span></h2>
+
+        <div class="content is-full-width has-text-centered">
+          <img id="architecture-image" src="./static/images/architecture.png"
+               alt="DisCo architecture."/>
+
+          <p class="has-text-justified">
+            <span class="disco">DisCo</span>
+            leverages scalable distributed contact-implicit 
+            optimization by decomposing complex centralized tasks into 
+            smaller-scale problems solved efficiently by individual robots,
+            to enable contact-rich, dexterous multi-robot collaboration.
+            For example, in collaborative manipulation, DisCo enables 
+            multi-robot teams to make and break contact with the object or 
+            environment, e.g., in narrow corridors, while manipulating the 
+            object or locomoting collaboratively with other robots. 
+            In robot team sports such as robot soccer and robot hockey, 
+            DisCo enables intelligent tactics planning, with each 
+            robot in the team working cooperatively to score a point, 
+            e.g., by passing an object (or ball) into a goal area. 
+            Moreover, in locomotion problems involving modular robots, 
+            DisCo enables each module to compute the contact interactions 
+            between each module and the environment required for locomotion,
+            in cooperation with other modules. In all of these examples, 
+            our method can find dynamic solutions, that include 
+            free-flying ballistic phases where the robots or objects 
+            are not in static or pseudo-static equilibrium (e.g., throwing 
+            or shooting a ball, or jumping a modular robot over an obstacle).
+          </p>
+        </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Hardware Experiments</h2>
+        <p>
+          We demonstrate the superior performance of DisCo compared to centralized
+          contact-implict trajecttory optimization methods. 
+          Here, we provide results in collaborative manipulation, robot team sports,
+          and modular-robot locomotion.
+          Please refer to the paper for a more detailed discussion.
+        </p>
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <p>
+            In the video on the left, a group of 4 robots (in red) 
+            manipulate a rod (in blue) by 
+            sliding it along the ground to a desired position and orientation 
+            (in gray). The robots begin from arbitrary locations around the rod. 
+            They approach and contact the rod to form a stable grasp, sliding 
+            the rod along the ground. They bring the object to rest at the 
+            desired configuration.
+          </p>
+
+          <p>
+            In the video on the right, a group of 3 quadrotors manipulate a 
+            spherical object (purple) released from a platform, as it falls 
+            under gravity, to a desired position and orientation on the 
+            pedestal. The quadrotors approach the falling object, 
+            gently make contact, and decelerate its fall, and 
+            bring the object to rest at its desired configuration on 
+            the pedestal.
+          </p>
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">        
+                <video poster="" id="s_0" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/se_2_manip.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+        
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+                  <video poster="" id="s_1" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/se_3_manip.mp4"
+                            type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- <br/> -->
+
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+
+          <p>
+            In the video on the left, a team of robots (in purple) 
+            in a hit-and-catch robot team game, with the objective 
+            of getting the blue puck (with a yellow top) into the goal 
+            (designated by the white circle).
+            A pair of robots complete a short pass to begin the game, after kickoff.
+          </p>
+
+          <p>
+            In the video on the right, we show an implementation of
+            DisCo on an inflatable truss robot for locomotion 
+            on a flat terrain. The top row shows the optimized simulation 
+            results, while the bottom row shows the time-matched 
+            real-world results.
+          </p>
+          
+          <div class="columns is-centered">
+
+            <div class="column">
+              <div class="content">        
+                <video poster="" id="s_0" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/robot_games.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+        
+            <div class="column">
+              <div class="columns is-centered">
+                <div class="column content">
+                  <video poster="" id="s_1" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/locomotion.mp4"
+                            type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop"> -->
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="./static/videos/video.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  <!-- </div>
+</section> -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @misc{shorinwa2024disco,
+        title={DisCo: Distributed Contact-Rich Trajectory Optimization for Forceful Multi-Robot Collaboration}, 
+        author={Ola Shorinwa and Matthew Devlin and Elliot W. Hawkes and Mac Schwager},
+        journal={arXiv preprint arXiv},
+        year={2024}
+        }
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+            . We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
